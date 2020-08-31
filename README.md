@@ -1,3 +1,3 @@
-# cording-challenge
+# coding-challenge
 
-Cording Challenge ( Algorithm,  Data structure ... )
+Coding Challenge ( Algorithm,  Data structure ... )

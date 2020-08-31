@@ -8,11 +8,11 @@
 		<version>2.3.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.cording</groupId>
+	<groupId>com.coding</groupId>
 	<artifactId>programmers</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Spring test and cording test</name>
-	<description>Spring test and cording test</description>
+	<name>Spring test and coding test</name>
+	<description>Spring test and coding test</description>
 
 	<properties>
 		<java.version>1.8</java.version>

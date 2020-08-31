@@ -11,8 +11,8 @@
 	<groupId>com.coding</groupId>
 	<artifactId>programmers</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Spring test and coding test</name>
-	<description>Spring test and coding test</description>
+	<name>coding challenge with spring boot</name>
+	<description>coding challenge with spring boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -31,12 +31,20 @@
 			<version>3.9</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

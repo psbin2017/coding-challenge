@@ -1,7 +1,7 @@
 package com.coding.programmers.level1;
 
 import org.apache.commons.lang3.ArrayUtils;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * https://programmers.co.kr/learn/courses/30/lessons/12969

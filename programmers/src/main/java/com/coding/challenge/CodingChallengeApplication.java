@@ -1,13 +1,13 @@
-package com.coding.programmers;
+package com.coding.challenge;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringTestAndCordingTestApplication {
+public class CodingChallengeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringTestAndCordingTestApplication.class, args);
+		SpringApplication.run(CodingChallengeApplication.class, args);
 	}
 
 }

@@ -5,14 +5,15 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * https://leetcode.com/problems/binary-tree-level-order-traversal/
+ * https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
  */
-class BinaryTreeLevelOrderTraversal {
+class BinaryTreeLevelOrderTraversal2 {
 
     private class TreeNode {
         int val;
@@ -34,9 +35,10 @@ class BinaryTreeLevelOrderTraversal {
 
     }
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         loop(result, 0, root);
+        Collections.reverse(result);
         return result;
     }
 
@@ -58,20 +60,20 @@ class BinaryTreeLevelOrderTraversal {
         loop(result, next, node.right);
     }
 
-    @DisplayName("Input: root = [3,9,20,null,null,15,7], Output: [[3],[9,20],[15,7]]")
+    @DisplayName("Input: root = [3,9,20,null,null,15,7], Output: [[15,7],[9,20],[3]]")
     @Test
     void test1() throws Exception {
         // given
         TreeNode right = new TreeNode(20, new TreeNode(15), new TreeNode(7));
         TreeNode left = new TreeNode(9);
         TreeNode root = new TreeNode(3, left, right);
-        
+
         // when
-        List<List<Integer>> result = levelOrder(root);
+        List<List<Integer>> result = levelOrderBottom(root);
         List<List<Integer>> expected = new ArrayList<>();
-        expected.add( Arrays.asList(3) );
-        expected.add( Arrays.asList(9, 20) );
         expected.add( Arrays.asList(15, 7) );
+        expected.add( Arrays.asList(9, 20) );
+        expected.add( Arrays.asList(3) );
 
         // then
         assertEquals(expected, result);
@@ -84,7 +86,7 @@ class BinaryTreeLevelOrderTraversal {
         TreeNode root = new TreeNode(1);
 
         // when
-        List<List<Integer>> result = levelOrder(root);
+        List<List<Integer>> result = levelOrderBottom(root);
         List<List<Integer>> expected = new ArrayList<>();
         expected.add( Arrays.asList(1) );
 
@@ -98,10 +100,11 @@ class BinaryTreeLevelOrderTraversal {
         // given
 
         // when
-        List<List<Integer>> result = levelOrder(null);
+        List<List<Integer>> result = levelOrderBottom(null);
         List<List<Integer>> expected = new ArrayList<>();
 
         // then
         assertEquals(expected, result);
     }
+    
 }
